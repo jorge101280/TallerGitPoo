@@ -1,16 +1,16 @@
 
 import { Persona } from "./personas";
 
-const jorge = new Persona("Jorge", 25);
-const maria = new Persona("Maria", 20);
-const jose = new Persona("Jose", 30);
-const sebastian = new Persona("Sebastian", 35);
-const juanjose = new Persona("Juan Jose", 40);
-const santiago = new Persona("Santiago", 45);
-const carlos = new Persona("Carlos", 50);
-const tulio = new Persona("Tulio", 55);
-const alberto = new Persona("Alberto", 60);
-const mario = new Persona("Mario", 65);
+const jorge = new Persona("Jorge", 25, {calle: "calle 15", ciudad: "Cali", pais: "Colombia"});
+const maria = new Persona("Maria", 20, {calle: "calle 26", ciudad: "Medellin", pais: "Colombia"});
+const jose = new Persona("Jose", 30, {calle: "calle 34", ciudad: "Bogota", pais: "Colombia"});
+const sebastian = new Persona("Sebastian", 35, {calle: "calle 49", ciudad: "Medellin", pais: "Colombia"});
+const juanjose = new Persona("Juan Jose", 40, {calle: "calle 85", ciudad: "Barranquilla", pais: "Colombia"});
+const santiago = new Persona("Santiago", 45, {calle: "calle 46", ciudad: "Lisboa", pais: "Portugal"});
+const carlos = new Persona("Carlos", 50, {calle: "calle 76", ciudad: "Madrid", pais: "España"});
+const tulio = new Persona("Tulio", 55, {calle: "calle 48", ciudad: "Barcelona", pais: "España"});
+const alberto = new Persona("Alberto", 60, {calle: "calle 99", ciudad: "Madrid", pais: "España"});
+const mario = new Persona("Mario", 65, {calle: "calle 12", ciudad: "Caracas", pais: "Venezuela"});
 
 jorge.saludar();
 maria.saludar();
@@ -26,16 +26,16 @@ mario.saludar();
 
 import { Empleado } from "./personas";
 
-const jorgeEmp = new Empleado("Jorge", 25, 1000000);
-const mariaEmp = new Empleado("Maria", 20, 1500000);
-const joseEmp = new Empleado("Jose", 30, 2000000);
-const sebastianEmp = new Empleado("Sebastian", 35, 2500000);
-const juanjoseEmp = new Empleado("Juan Jose", 40, 3000000);
-const santiagoEmp = new Empleado("Santiago", 45, 3500000);
-const carlosEmp = new Empleado("Carlos", 50, 4000000);
-const tulioEmp = new Empleado("Tulio", 55, 4500000);
-const albertoEmp = new Empleado("Alberto", 60, 5000000);
-const marioEmp = new Empleado("Mario", 65, 5500000);
+const jorgeEmp = new Empleado("Jorge", 25, 2000000, {calle: "calle 15", ciudad: "Cali", pais: "Colombia"});
+const mariaEmp = new Empleado("Maria", 20, 3000000, {calle: "calle 26", ciudad: "Medellin", pais: "Colombia"});
+const joseEmp = new Empleado("Jose", 30, 4000000, {calle: "calle 34", ciudad: "Bogota", pais: "Colombia"});
+const sebastianEmp = new Empleado("Sebastian", 35, 7000000, {calle: "calle 49", ciudad: "Medellin", pais: "Colombia"});
+const juanjoseEmp = new Empleado("Juan Jose", 40, 1000000, {calle: "calle 85", ciudad: "Barranquilla", pais: "Colombia"});
+const santiagoEmp = new Empleado("Santiago", 45, 1200000, {calle: "calle 46", ciudad: "Lisboa", pais: "Portugal"});
+const carlosEmp = new Empleado("Carlos", 50, 1300000, {calle: "calle 76", ciudad: "Madrid", pais: "España"});
+const tulioEmp = new Empleado("Tulio", 55, 4100000, {calle: "calle 48", ciudad: "Barcelona", pais: "España"});
+const albertoEmp = new Empleado("Alberto", 60, 1100000, {calle: "calle 99", ciudad: "Madrid", pais: "España"});
+const marioEmp = new Empleado("Mario", 65, 2100000, {calle: "calle 12", ciudad: "Caracas", pais: "Venezuela"});
 
 jorgeEmp.saludar();
 mariaEmp.saludar();

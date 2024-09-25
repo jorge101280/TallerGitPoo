@@ -1,14 +1,18 @@
 //crear clase persona y exportarla con nombre, edad y metodo saludar que imprima “Persona: Tú nombre es xxxx y tienes xx años”
+import { Direccion } from "./interfaz_direcc";
 
 export class Persona {
     nombre: string;
     private edad: number;
-    constructor(nombre: string, edad: number) {
+    direccion: Direccion;
+
+    constructor(nombre: string, edad: number, direccion: Direccion) {
         this.nombre = nombre;
         this.edad = edad;
+        this.direccion = direccion;
     }
     saludar() {
-        console.log(`Persona: Tú nombre es ${this.nombre} y tienes ${this.edad} años`);
+        console.log(`Persona: Tú nombre es ${this.nombre}, tienes ${this.edad} años y vives en la ciudad de ${this.direccion.ciudad}`);
     }
 
     getEdad(): number {
@@ -20,8 +24,8 @@ export class Persona {
 
 export class Empleado extends Persona {
     salario: number;
-    constructor(nombre: string, edad: number, salario: number) {
-        super(nombre, edad);
+    constructor(nombre: string, edad: number, salario: number, direccion: Direccion) {
+        super(nombre, edad, direccion);
         this.salario = salario;
     }
     trabajar() {
@@ -29,7 +33,8 @@ export class Empleado extends Persona {
     }
     //Añade a la clase Empleado el método saludar(), pero sobrescríbelo para que incluya el salario en el saludo (Debe de imprimir ”Empleado: Hola xxx tu edad es xx  y el salario es de xxxx”)
     saludar() {
-        console.log(`Empleado: Hola ${this.nombre} tu edad es ${this.getEdad()} y el salario es de ${this.salario}`);
+        console.log(`Empleado: Hola ${this.nombre} tu edad es ${this.getEdad()}, vives en la ciudad de ${this.direccion.ciudad} y el salario es de ${this.salario}`);
     }        
 }
+
 
