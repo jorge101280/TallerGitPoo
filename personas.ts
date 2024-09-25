@@ -16,3 +16,16 @@ export class Persona {
     }
 }
 
+//Crea una clase Empleado que herede de Persona, añadiendo una propiedad salario y un método trabajar() que imprima un mensaje indicando la cantidad de horas que se trabaja en el día
+
+export class Empleado extends Persona {
+    salario: number;
+    constructor(nombre: string, edad: number, salario: number) {
+        super(nombre, edad);
+        this.salario = salario;
+    }
+    trabajar() {
+        console.log(`trabajarás x horas al día`);
+    }
+}
+
