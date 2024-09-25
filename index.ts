@@ -23,3 +23,29 @@ tulio.saludar();
 alberto.saludar();
 mario.saludar();
 
+
+import { Empleado } from "./personas";
+
+const jorgeEmp = new Empleado("Jorge", 25, 1000000);
+const mariaEmp = new Empleado("Maria", 20, 1500000);
+const joseEmp = new Empleado("Jose", 30, 2000000);
+const sebastianEmp = new Empleado("Sebastian", 35, 2500000);
+const juanjoseEmp = new Empleado("Juan Jose", 40, 3000000);
+const santiagoEmp = new Empleado("Santiago", 45, 3500000);
+const carlosEmp = new Empleado("Carlos", 50, 4000000);
+const tulioEmp = new Empleado("Tulio", 55, 4500000);
+const albertoEmp = new Empleado("Alberto", 60, 5000000);
+const marioEmp = new Empleado("Mario", 65, 5500000);
+
+jorgeEmp.saludar();
+mariaEmp.saludar();
+joseEmp.saludar();
+sebastianEmp.saludar();
+juanjoseEmp.saludar();
+santiagoEmp.saludar();
+carlosEmp.saludar();
+tulioEmp.saludar();
+albertoEmp.saludar();
+marioEmp.saludar();
+
+
