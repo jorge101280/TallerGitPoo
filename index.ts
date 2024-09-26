@@ -1,5 +1,9 @@
 
 import { Persona } from "./personas";
+//importar clase vehiculo
+import { Vehiculo, Coche, moto } from "./vehiculos";
+
+
 
 const jorge = new Persona("Jorge", 25, {calle: "calle 15", ciudad: "Cali", pais: "Colombia"});
 const maria = new Persona("Maria", 20, {calle: "calle 26", ciudad: "Medellin", pais: "Colombia"});
@@ -47,5 +51,22 @@ carlosEmp.saludar();
 tulioEmp.saludar();
 albertoEmp.saludar();
 marioEmp.saludar();
+
+//crear vehiculo
+
+const coche1 = new Coche("Ford", "Fiesta", 2021);
+const moto1 = new moto("Suzuki", "Dr650", 2021);
+
+
+//agregar vehiculo a Jorge
+jorge.agregarVehiculo(coche1);
+jorge.agregarVehiculo(moto1);
+
+//mostrar vehiculos
+console.log("___________________________________");
+console.log("Vehiculos de Jorge:");
+jorge.saludar();
+jorge.mostrarVehiculos();
+
 
 

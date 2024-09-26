@@ -1,15 +1,20 @@
 //crear clase persona y exportarla con nombre, edad y metodo saludar que imprima “Persona: Tú nombre es xxxx y tienes xx años”
 import { Direccion } from "./interfaz_direcc";
+import { Vehiculo } from "./vehiculos";
+import { Coche } from "./vehiculos";
+import { moto } from "./vehiculos";
 
 export class Persona {
     nombre: string;
     private edad: number;
     direccion: Direccion;
+    vehiculos?: Vehiculo[]; 
 
-    constructor(nombre: string, edad: number, direccion: Direccion) {
+    constructor(nombre: string, edad: number, direccion: Direccion, vehiculos?: Vehiculo[]) {
         this.nombre = nombre;
         this.edad = edad;
         this.direccion = direccion;
+        this.vehiculos = vehiculos || [];
     }
     saludar() {
         console.log(`Persona: Tú nombre es ${this.nombre}, tienes ${this.edad} años y vives en la ciudad de ${this.direccion.ciudad}`);
@@ -18,6 +23,23 @@ export class Persona {
     getEdad(): number {
         return this.edad;
     }
+
+    agregarVehiculo(vehiculo: Vehiculo): void {
+        if (!this.vehiculos) {
+            this.vehiculos = []; // Inicializa el arreglo si no está definido
+        }
+        this.vehiculos.push(vehiculo);
+    }
+
+    //mostrar vehiculos
+    mostrarVehiculos(): void {
+        if (this.vehiculos) {
+            this.vehiculos.forEach((vehiculo) => {
+                console.log(vehiculo);
+            });
+        }
+    }   
+
 }
 
 //Crea una clase Empleado que herede de Persona, añadiendo una propiedad salario y un método trabajar() que imprima un mensaje indicando la cantidad de horas que se trabaja en el día
