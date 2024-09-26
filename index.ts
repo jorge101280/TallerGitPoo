@@ -3,6 +3,7 @@ import { Persona } from "./personas";
 //importar clase vehiculo
 import { Vehiculo, Coche, moto } from "./vehiculos";
 import { EstadoCivil } from "./enumEstadoCivil";
+import { Empresa } from "./empresa";
 
 
 
@@ -75,6 +76,23 @@ const Fabio = new Persona("Fabio", 25, {calle: "calle 15", ciudad: "Cali", pais:
 
 Fabio.mostrarEstadoCivil();
 
+//agregar empleados a empresa
+const empresa = new Empresa([]);
+empresa.agregarEmpleado(jorgeEmp);
+empresa.agregarEmpleado(mariaEmp);
+empresa.agregarEmpleado(joseEmp);
+empresa.agregarEmpleado(sebastianEmp);
+
+
+//mostrar empleados
+console.log("___________________________________");
+console.log("Empleados de la empresa:");
+empresa.mostrarEmpleados();
+
+//mostrar salario total
+console.log("___________________________________");
+console.log("Salario total de los empleados:");
+console.log(empresa.calcularSalarioTotal());
 
 
 
