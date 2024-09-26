@@ -2,6 +2,7 @@
 import { Persona } from "./personas";
 //importar clase vehiculo
 import { Vehiculo, Coche, moto } from "./vehiculos";
+import { EstadoCivil } from "./enumEstadoCivil";
 
 
 
@@ -55,7 +56,7 @@ marioEmp.saludar();
 //crear vehiculo
 
 const coche1 = new Coche("Ford", "Fiesta", 2021);
-const moto1 = new moto("Suzuki", "Dr650", 2021);
+const moto1 = new moto("Suzuki", "Dr650", 2019);
 
 
 //agregar vehiculo a Jorge
@@ -67,6 +68,13 @@ console.log("___________________________________");
 console.log("Vehiculos de Jorge:");
 jorge.saludar();
 jorge.mostrarVehiculos();
+
+//crear persona con estado civil
+const Fabio = new Persona("Fabio", 25, {calle: "calle 15", ciudad: "Cali", pais: "Colombia"}, undefined, EstadoCivil.Viudo);
+//mostrar estado civil
+
+Fabio.mostrarEstadoCivil();
+
 
 
 
