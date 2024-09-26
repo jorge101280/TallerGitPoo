@@ -1,0 +1,103 @@
+[
+    {
+      "nombre": "Jorge",
+      "edad": 25,
+      "salario": 2000000,
+      "direccion": {
+        "calle": "calle 15",
+        "ciudad": "Cali",
+        "pais": "Colombia"
+      }
+    },
+    {
+      "nombre": "Maria",
+      "edad": 20,
+      "salario": 3000000,
+      "direccion": {
+        "calle": "calle 26",
+        "ciudad": "Medellin",
+        "pais": "Colombia"
+      }
+    },
+    {
+      "nombre": "Jose",
+      "edad": 30,
+      "salario": 4000000,
+      "direccion": {
+        "calle": "calle 34",
+        "ciudad": "Bogota",
+        "pais": "Colombia"
+      }
+    },
+    {
+      "nombre": "Sebastian",
+      "edad": 35,
+      "salario": 7000000,
+      "direccion": {
+        "calle": "calle 49",
+        "ciudad": "Medellin",
+        "pais": "Colombia"
+      }
+    },
+    {
+      "nombre": "Juan Jose",
+      "edad": 40,
+      "salario": 1000000,
+      "direccion": {
+        "calle": "calle 85",
+        "ciudad": "Barranquilla",
+        "pais": "Colombia"
+      }
+    },
+    {
+      "nombre": "Santiago",
+      "edad": 45,
+      "salario": 1200000,
+      "direccion": {
+        "calle": "calle 46",
+        "ciudad": "Lisboa",
+        "pais": "Portugal"
+      }
+    },
+    {
+      "nombre": "Carlos",
+      "edad": 50,
+      "salario": 1300000,
+      "direccion": {
+        "calle": "calle 76",
+        "ciudad": "Madrid",
+        "pais": "España"
+      }
+    },
+    {
+      "nombre": "Tulio",
+      "edad": 55,
+      "salario": 4100000,
+      "direccion": {
+        "calle": "calle 48",
+        "ciudad": "Barcelona",
+        "pais": "España"
+      }
+    },
+    {
+      "nombre": "Alberto",
+      "edad": 60,
+      "salario": 1100000,
+      "direccion": {
+        "calle": "calle 99",
+        "ciudad": "Madrid",
+        "pais": "España"
+      }
+    },
+    {
+      "nombre": "Mario",
+      "edad": 65,
+      "salario": 2100000,
+      "direccion": {
+        "calle": "calle 12",
+        "ciudad": "Caracas",
+        "pais": "Venezuela"
+      }
+    }
+  ]
+  
