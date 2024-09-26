@@ -1,0 +1,13 @@
+[
+  {
+    "nombre": "JuanCamilo",
+    "edad": 40,
+    "direccion": {
+      "calle": "calle 85",
+      "ciudad": "Valledupar",
+      "pais": "Colombia"
+    },
+    "vehiculos": [],
+    "salario": 1000000
+  }
+]

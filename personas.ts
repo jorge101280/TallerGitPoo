@@ -56,7 +56,8 @@ export class Empleado extends Persona {
     //Añade a la clase Empleado el método saludar(), pero sobrescríbelo para que incluya el salario en el saludo (Debe de imprimir ”Empleado: Hola xxx tu edad es xx  y el salario es de xxxx”)
     saludar() {
         console.log(`Empleado: Hola ${this.nombre} tu edad es ${this.getEdad()}, vives en la ciudad de ${this.direccion.ciudad} y el salario es de ${this.salario}`);
-    }        
+    }
+            
 }
 
 
