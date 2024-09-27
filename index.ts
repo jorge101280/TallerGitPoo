@@ -5,7 +5,7 @@ import { Vehiculo, Coche, moto } from "./vehiculos";
 import { EstadoCivil } from "./enumEstadoCivil";
 import { Empresa } from "./empresa";
 import { Proyecto } from "./proyectos";
-
+import { Departamento } from "./departamentos";
 
 
 const jorge = new Persona("Jorge", 25, {calle: "calle 15", ciudad: "Cali", pais: "Colombia"});
@@ -97,8 +97,8 @@ console.log(empresa.calcularSalarioTotal());
 
 
 // crear proyecto
-const proyecto1 = new Proyecto(001, "Mantenimiento de maquinas");
-const proyecto2 = new Proyecto(002, "Desarrollo de aplicaciones");
+const proyecto1 = new Proyecto(1, "Mantenimiento de maquinas");
+const proyecto2 = new Proyecto(2, "Desarrollo de aplicaciones");
 
 //agregar proyectos a empleado Jorge
 jorgeEmp.agregarProyecto(proyecto1);
@@ -108,3 +108,18 @@ jorgeEmp.agregarProyecto(proyecto2);
 console.log("___________________________________");
 console.log("Proyectos de Jorge:");
 jorgeEmp.mostrarProyectos();
+
+
+// crear departamento
+const departamento1 = new Departamento("Departamento de tecnología");
+const departamento2 = new Departamento("Departamento de marketing");
+
+//agregar empleados a departamento
+departamento1.agregarEmpleado(jorgeEmp);
+departamento1.agregarEmpleado(mariaEmp);
+departamento1.agregarEmpleado(joseEmp);
+departamento1.agregarEmpleado(sebastianEmp);
+
+//mostrar empleados
+console.log("___________________________________");
+departamento1.listarEmpleados();
