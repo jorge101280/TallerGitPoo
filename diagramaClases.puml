@@ -1,0 +1,82 @@
+@startuml
+
+class Persona {
+    + nombre: string
+    - edad: number
+    + direccion: Direccion
+    + vehiculos: Vehiculo[]
+    + estadoCivil: EstadoCivil
+    + saludar(): void
+    + getEdad(): number
+    + agregarVehiculo(vehiculo: Vehiculo): void
+    + mostrarVehiculos(): void
+    + mostrarEstadoCivil(): void
+}
+
+class Empleado extends Persona {
+    + salario: number
+    + proyectos: Proyecto[]
+    + trabajar(): void
+    + saludar(): void
+    + agregarProyecto(proyecto: Proyecto): void
+    + mostrarProyectos(): void
+}
+
+class Direccion {
+    + calle: string
+    + ciudad: string
+    + pais: string
+}
+
+class Proyecto {
+    + id: number
+    + nombre: string
+}
+
+abstract class Vehiculo {
+    + marca: string
+    + modelo: string
+    + anio: number
+    + arrancar(): void
+}
+
+class Coche extends Vehiculo {
+    + arrancar(): void
+}
+
+class Moto extends Vehiculo {
+    + arrancar(): void
+}
+
+class Empresa {
+    + empleados: Empleado[]
+    + agregarEmpleado(empleado: Empleado): void
+    + mostrarEmpleados(): void
+    + eliminarEmpleadoPorNombre(nombre: string): void
+    + calcularSalarioTotal(): number
+}
+
+class Departamento {
+    + nombre: string
+    + empleados: Empleado[]
+    + agregarEmpleado(empleado: Empleado): void
+    + eliminarEmpleado(empleado: Empleado): void
+    + listarEmpleados(): void
+}
+
+enum EstadoCivil {
+    Soltero
+    Casado
+    Divorciado
+    Viudo
+    Separado
+}
+
+Persona "1" *-- "1..*" Vehiculo
+Persona "1" *-- "1" Direccion
+Persona "1" --> EstadoCivil
+Empleado "1" *-- "0..*" Proyecto
+Departamento "1" *-- "0..*" Empleado
+Empresa "1" *-- "0..*" Empleado
+
+@enduml
