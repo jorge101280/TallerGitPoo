@@ -4,6 +4,7 @@ import { Persona } from "./personas";
 import { Vehiculo, Coche, moto } from "./vehiculos";
 import { EstadoCivil } from "./enumEstadoCivil";
 import { Empresa } from "./empresa";
+import { Proyecto } from "./proyectos";
 
 
 
@@ -95,4 +96,15 @@ console.log("Salario total de los empleados:");
 console.log(empresa.calcularSalarioTotal());
 
 
+// crear proyecto
+const proyecto1 = new Proyecto(001, "Mantenimiento de maquinas");
+const proyecto2 = new Proyecto(002, "Desarrollo de aplicaciones");
 
+//agregar proyectos a empleado Jorge
+jorgeEmp.agregarProyecto(proyecto1);
+jorgeEmp.agregarProyecto(proyecto2);
+
+//mostrar proyectos
+console.log("___________________________________");
+console.log("Proyectos de Jorge:");
+jorgeEmp.mostrarProyectos();

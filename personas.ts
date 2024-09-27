@@ -4,6 +4,8 @@ import { Vehiculo } from "./vehiculos";
 import { Coche } from "./vehiculos";
 import { moto } from "./vehiculos";
 import { EstadoCivil } from "./enumEstadoCivil";
+import { Proyecto } from "./proyectos";
+
 
 export class Persona {
     nombre: string;
@@ -58,6 +60,8 @@ export class Persona {
 
 export class Empleado extends Persona {
     salario: number;
+    proyectos: Proyecto[] = [];
+
     constructor(nombre: string, edad: number, salario: number, direccion: Direccion) {
         super(nombre, edad, direccion);
         this.salario = salario;
@@ -69,6 +73,17 @@ export class Empleado extends Persona {
     saludar() {
         console.log(`Empleado: Hola ${this.nombre} tu edad es ${this.getEdad()}, vives en la ciudad de ${this.direccion.ciudad} y el salario es de ${this.salario}`);
     }           
+    //agregar proyectos
+    agregarProyecto(proyecto: Proyecto): void {
+        this.proyectos.push(proyecto);
+    }
+    
+    //mostrar proyectos
+    mostrarProyectos(): void {
+        this.proyectos.forEach((proyecto) => {
+            console.log(proyecto);
+        });
+    }
 }
 
 
